@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Apex University Admission</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" type="text/css" media="screen" href="css/styles.min.css">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+  <style>
+    /* Reduce spacing for paragraphs under headers */
+    .header-paragraph {
+      margin-top: 0.2em;
+      margin-bottom: 0.5em;
+      font-size: 0.95em;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="headerWrapper">
+    <header id="top" style="display:flex;align-items:center;gap:1rem;padding:1rem;">
+      <a href="index.html" class="logo-link" style="display:flex;align-items:center;">
+        <img 
+          src="images/logo1x.png"
+          srcset="images/logo1x.png 1x,
+                  images/logo2x.png 2x,
+                  images/logo3x.png 3x"
+          alt="Apex University Logo"
+          style="height:60px;width:auto;display:block;">
+      </a>
+      <span style="font-size:1.8rem;font-weight:bold;">Apex University</span>
+      <a href="#navlinks" style="margin-left:auto;font-size:2rem;text-decoration:none;color:#333;">&#9776;</a>
+    </header>
+  </div><!-- end header wrapper -->
+
+  <div id="navWrapper">
+    <nav id="navlinks">
+      <a href="#top">&#10005;</a>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Programs</a></li>
+        <li class="active"><a href="#">Applications</a></li>
+        <li><a href="#">Faculty & Staff</a></li>
+        <li><a href="#">Campus Life</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div> <!-- end nav wrapper -->
+
+  <div id="mainWrapper">
+    <main>
+
+      <h1>Apply to Apex University</h1>
+      <p class="header-paragraph">
+        Please complete this application form carefully and professionally. Provide accurate information so our admissions team can process your application efficiently. Double-check your contact information before submitting.
+      </p>
+
+      <form method="GET" action="thanks.html" class="my-form" autocomplete="on">
+
+        <!-- Personal Information -->
+        <h3>Personal Information</h3>
+        <label>First Name: <input type="text" name="fname" autocomplete="given-name" required title="First Name Here"></label>
+        <label>Last Name: <input type="text" name="lname" autocomplete="family-name" required title="Last Name Here"></label>
+        <label>Email: <input type="email" name="email" autocomplete="email" required title="Your Email Please"></label>
+        <label>Cell Phone: <input type="tel" name="phone" autocomplete="tel" required title="Cell Phone # Here"></label>
+
+        <!-- Optional Address -->
+        <h3>Address <span class="optional">(optional)</span></h3>
+        <p class="header-paragraph">
+          Providing your address can help us send important information or materials related to your application, if needed.
+        </p>
+        <label>Street Address:
+          <input type="text" name="street-address">
+        </label>
+        <label>City:
+          <input type="text" name="city">
+        </label>
+        <label>State:
+          <input type="text" name="state">
+        </label>
+        <label>Zip Code:
+          <input type="text" name="zip">
+        </label>
+
+        <!-- Optional Prior Education -->
+        <label>
+          Type of Prior Education <span class="optional">(optional)</span>:
+          <select name="prior-education">
+            <option value="">Select your education level</option>
+            <option value="high-school">High School Diploma</option>
+            <option value="ged">GED</option>
+            <option value="associate">Associate Degree</option>
+            <option value="other">Other</option>
+          </select>
+        </label>
+
+        <label>
+          High School Graduation Date <span class="optional">(optional)</span>:
+          <input type="date" name="grad-date">
+        </label>
+
+        <!-- Programs of Interest -->
+        <h3>Programs of Interest <span class="optional">(optional)</span></h3>
+        <label><input type="checkbox" name="programs" value="Computer Science"> Computer Science</label>
+        <label><input type="checkbox" name="programs" value="Business Administration"> Business Administration</label>
+        <label><input type="checkbox" name="programs" value="Psychology"> Psychology</label>
+        <label><input type="checkbox" name="programs" value="Biology"> Biology</label>
+        <label><input type="checkbox" name="programs" value="Engineering"> Engineering</label>
+        <label><input type="checkbox" name="programs" value="Fine Arts"> Fine Arts</label>
+        <label><input type="checkbox" name="programs" value="Education"> Education</label>
+        <label><input type="checkbox" name="programs" value="Environmental Science"> Environmental Science</label>
+
+        <!-- Communication Preferences -->
+        <h3>Communication Preferences <span class="optional">(optional)</span></h3>
+        <label><input type="radio" name="contact-method" value="email"> Email</label>
+        <label><input type="radio" name="contact-method" value="phone"> Phone</label>
+        <label><input type="radio" name="contact-method" value="mail"> Postal Mail</label>
+
+        <!-- Account Setup -->
+        <h3>Account Setup</h3>
+        <label>Username (6-10 letters):
+          <input type="text" name="username" required pattern="[A-Za-z]{6,10}" title="Enter 6-10 letters for your username">
+        </label>
+
+        <label>Password (min 6 characters):
+          <input type="password" name="password" required minlength="6" title="Enter a password at least 6 characters long">
+        </label>
+
+        <input type="submit" value="Submit Application">
+      </form>
+
+    </main>
+  </div><!-- end main wrapper -->
+
+  <div id="footerWrapper">
+    <footer>
+      <p>Copyright &copy; Walter Blundell 2025 University Admissions
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#">Clients</a></p>
+    </footer>
+  </div> <!-- end footer wrapper -->
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Thank You - Apex University</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" media="screen" href="css/styles.min.css">
+
+  <style>
+    /* Flex layout to push footer to bottom */
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    #mainWrapper {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    main h1 {
+      font-family: 'Merriweather', serif;
+      color: #7c1d47;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    main p {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1rem;
+      color: #333;
+      max-width: 600px;
+      margin: 0.5rem auto;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+   <div id="headerWrapper">
+  <header id="top" style="display:flex;align-items:center;gap:1rem;padding:1rem;">
+  <a href="index.html" class="logo-link" style="display:flex;align-items:center;">
+    <img 
+      src="images/logo1x.png"
+      srcset="images/logo1x.png 1x,
+              images/logo2x.png 2x,
+              images/logo3x.png 3x"
+      alt="Apex University Logo"
+      style="height:60px;width:auto;display:block;">
+  </a>
+  <span style="font-size:1.8rem;font-weight:bold;">Apex University</span>
+  <a href="#navlinks" style="margin-left:auto;font-size:2rem;text-decoration:none;color:#333;">&#9776;</a>
+</header>
+</div>
+
+  <!-- Navigation -->
+  <div id="navWrapper">
+    <nav id="navlinks">
+      <a href="#top">&#10005;</a>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Programs</a></li>
+        <li class="active"><a href="#">Applications</a></li>
+        <li><a href="#">Faculty & Staff</a></li>
+        <li><a href="#">Campus Life</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Main Content -->
+  <div id="mainWrapper">
+    <main>
+      <h1 class="thank-you-title">Thank You for Applying!</h1>
+      <p>Your application to <strong>Apex University</strong> has been successfully submitted. Our admissions team will review your information and contact you shortly regarding the next steps.</p>
+      <p>If you have any questions in the meantime, please <a href="#">reach out to our admissions office</a>.</p>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <div id="footerWrapper">
+    <footer>
+      <p>Copyright &copy; Walter Blundell 2025 University Admissions
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#">Clients</a>
+      </p>
+    </footer>
+  </div>
+
+</body>
+
+</html>

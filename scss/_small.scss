@@ -1,0 +1,260 @@
+/* --------------------------- RESET & BOX MODEL --------------------------- */
+html {
+  -webkit-text-size-adjust: 100%; 
+  -ms-text-size-adjust: 100%;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* --------------------------- BODY --------------------------- */
+body {
+  font-family: $defaultFont;
+  font-weight: $lightWeight;
+  min-width: 320px;
+  display: grid;
+  line-height: $leading;
+  color: #333;
+  background-color: #fff;
+}
+
+/* --------------------------- HEADINGS --------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headingFont;
+  font-weight: $boldWeight;
+  color: $primaryColor;
+  line-height: $leading;
+  margin: 0.5rem 0;
+}
+
+/* --------------------------- HEADER --------------------------- */
+#headerWrapper {
+  border-bottom: 1px solid $greyColor;
+}
+header span {
+  margin-left: 60px; /* push text slightly to the right of the logo */
+  font-size: 1.8rem;
+}
+header {
+  display: grid;
+  grid-template-columns: auto 1fr 44px;
+  column-gap: $gutter;
+  align-items: center;
+  padding: 0.5rem $gutter;
+
+  span {
+    font-family: $headingFont;
+    font-size: 1.8rem;
+    font-weight: $boldWeight;
+    color: $primaryColor;
+    letter-spacing: 1px;
+  }
+}
+.optional {
+    font-style: italic;
+    color: #666; /* medium gray */
+    background-color: #f8f8f8; /* subtle highlight */
+    padding: 0 2px; /* tiny space around text */
+}
+/* --------------------------- NAVIGATION --------------------------- */
+div#navWrapper {
+  grid-row-start: 4;
+}
+
+#top a, #navlinks > a {
+  display: block;
+  text-align: right;
+  font-size: 1.6rem;
+  height: 44px;
+  text-decoration: none;
+  color: #333;
+}
+
+#top a { font-size: 2rem; }
+#navlinks > a { padding: 15px 13px 0 0; }
+
+nav { height: 100vh; }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+li a {
+  display: block;
+  color: $primaryColor;
+  padding: 0.9rem 2vw;
+  text-decoration: none;
+  text-align: right;
+  border-bottom: 1px solid $greyColor;
+  font-family: $headingFont;
+}
+
+li.active a {
+  color: $secondaryColor;
+}
+.thank-you-title {
+  color: $secondaryColor; // or any color you like
+}
+#navlinks ul li.active a {
+    background-color: transparent; /* remove the block color */
+    color: $secondaryColor; /* dark grey text, optional */
+    border-radius: 0; /* remove rounding */
+    border-bottom: 3px solid #555; /* the underline */
+    transition: all 0.3s ease;
+}
+
+/* Hover bounce */
+#navlinks ul li a:hover {
+    animation: bounce 0.6s;
+}
+
+/* Keyframes for bounce */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-5px);
+  }
+  60% {
+    transform: translateY(-3px);
+  }
+}
+/* Apply bounce on hover */
+#navlinks ul li a:hover {
+    animation: bounce 0.6s;
+}
+
+/* --------------------------- MAIN CONTENT --------------------------- */
+main {
+  h1 {
+    padding: 1rem $gutter 0.5rem $gutter;
+    font-size: 1.5rem;
+    color: $secondaryColor;
+  }
+
+  p {
+    padding: 0.5rem $gutter;
+    line-height: $leading;
+  }
+}
+
+/* --------------------------- FORM --------------------------- */
+form.my-form {
+  margin: 2rem $gutter;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+
+  label {
+    display: block;
+    font-size: 0.9rem;
+    padding-top: 0.4rem;
+    color: $primaryColor;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    color: $secondaryColor;
+    margin: 2rem 0 1rem 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.2rem;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="password"],
+  input[type="date"],
+  select {
+    display: block;
+    margin: 0.2rem 0 1.5rem 0;
+    border: 2px solid $greyColor;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: $primaryColor;
+    width: 100%;
+    max-width: 350px;
+    padding: 0.7rem 1rem;
+    font-family: $defaultFont;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+
+  input:focus,
+  select:focus {
+    border-color: $secondaryColor;
+    box-shadow: 0 0 0 3px rgba(124,29,71,0.15);
+    outline: none;
+  }
+
+  input:required {
+    border-color: $requiredColor;
+  }
+
+  input:required:valid {
+    border-color: $validColor;
+  }
+
+  select {
+    appearance: none;
+    background: url("data:image/svg+xml;charset=US-ASCII,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12'><polygon points='0,0 12,0 6,6' style='fill:%237c1d47'/></svg>") no-repeat right 16px center;
+    background-size: 12px 12px;
+  }
+
+  /* Checkbox & Radio Buttons */
+  input[type="checkbox"],
+  input[type="radio"] {
+    accent-color: $secondaryColor;
+    margin-right: 0.5rem;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+  }
+
+  /* Submit Button */
+  input[type=submit] {
+    border: none;
+    background-color: $primaryColor;
+    color: white;
+    border-radius: 12px;
+    padding: 0.85rem 1.8rem;
+    margin: 2rem 0;
+    font-size: 1.2rem;
+    font-family: $headingFont;
+    font-weight: $boldWeight;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    width: 100%;
+    max-width: 350px;
+  }
+
+  input[type=submit]:hover {
+    background-color: $accentColor;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  }
+}
+
+
+/* --------------------------- FOOTER --------------------------- */
+#footerWrapper {
+  background-color: $primaryColor;
+}
+
+footer {
+  font-family: $defaultFont;
+  font-size: 0.85rem;
+  padding: 1rem $gutter;
+  color: $greyColor;
+  text-align: center;
+  line-height: $leading;
+
+  a { color: $greyColor; }
+}

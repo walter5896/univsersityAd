@@ -368,80 +368,55 @@ div#navWrapper {
   grid-row-start: 4;
 }
 
-#top a, #navlinks > a {
+/* Hide hamburger and close buttons completely */
+#top a[href="#navlinks"],
+#navlinks > a[href="#top"] {
+  display: none !important;
+}
+
+/* Keep nav responsive, but show links inline */
+#navlinks {
   display: block;
-  text-align: right;
-  font-size: 1.6rem;
-  height: 44px;
-  text-decoration: none;
-  color: #333;
+  position: relative;
+  background: none;
+  height: auto;
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem 0;
 }
 
-#top a {
-  font-size: 2rem;
-}
-
-#navlinks > a {
-  padding: 15px 13px 0 0;
-}
-
-nav {
-  height: 100vh;
-}
-
-ul {
+#navlinks ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
-li a {
-  display: block;
+#navlinks li {
+  display: inline-block;
+}
+
+#navlinks li a {
+  display: inline-block;
   color: #000000;
-  padding: 0.9rem 2vw;
+  padding: 0.6rem 1rem;
   text-decoration: none;
-  text-align: right;
-  border-bottom: 1px solid #ccc;
   font-family: "Merriweather", serif;
+  font-weight: 700;
+  border-bottom: none;
+  transition: color 0.3s ease;
 }
 
-li.active a {
+#navlinks li.active a {
   color: #1c5b01;
+  border-bottom: 3px solid #1c5b01;
 }
 
-.thank-you-title {
+#navlinks li a:hover {
   color: #1c5b01;
-}
-
-#navlinks ul li.active a {
-  background-color: transparent; /* remove the block color */
-  color: #1c5b01; /* dark grey text, optional */
-  border-radius: 0; /* remove rounding */
-  border-bottom: 3px solid #555; /* the underline */
-  transition: all 0.3s ease;
-}
-
-/* Hover bounce */
-#navlinks ul li a:hover {
-  animation: bounce 0.6s;
-}
-
-/* Keyframes for bounce */
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-5px);
-  }
-  60% {
-    transform: translateY(-3px);
-  }
-}
-/* Apply bounce on hover */
-#navlinks ul li a:hover {
-  animation: bounce 0.6s;
 }
 
 /* --------------------------- MAIN CONTENT --------------------------- */
@@ -453,6 +428,21 @@ main h1 {
 main p {
   padding: 0.5rem 10px;
   line-height: 150%;
+}
+
+.pricing-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  padding: 2.5rem 3rem; /* increase padding so text has breathing room */
+  max-width: 500px; /* increase max width so text fits */
+  width: 90%; /* flexible width on smaller screens */
+  box-sizing: border-box; /* ensures padding is included in width */
+  margin: 0 auto; /* centers card */
+}
+
+.pricing-card ul li {
+  word-wrap: break-word; /* prevent text overflow */
 }
 
 /* --------------------------- FORM --------------------------- */
@@ -544,6 +534,25 @@ form.my-form input[type=submit]:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
+#mainWrapper main {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+#mainWrapper main form {
+  align-items: center;
+}
+
+#mainWrapper main label,
+#mainWrapper main input,
+#mainWrapper main select,
+#mainWrapper main textarea {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
 /* --------------------------- FOOTER --------------------------- */
 #footerWrapper {
   background-color: #000000;
@@ -553,12 +562,12 @@ footer {
   font-family: "Roboto", sans-serif;
   font-size: 0.85rem;
   padding: 1rem 10px;
-  color: #ccc;
+  color: white;
   text-align: center;
   line-height: 150%;
 }
 footer a {
-  color: #ccc;
+  color: white;
 }
 
 @media only screen and (min-width: 35rem) {

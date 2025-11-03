@@ -2,29 +2,188 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Apex University Admission</title>
+  <title>Pivot Point | AI Coaching for Small Business</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 
-  <!-- Your CSS -->
+  <!-- CSS -->
   <link rel="stylesheet" type="text/css" media="screen" href="css/styles.min.css">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+
   <style>
-    /* Reduce spacing for paragraphs under headers */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      color: #333;
+    }
+
     .header-paragraph {
       margin-top: 0.2em;
       margin-bottom: 0.5em;
       font-size: 0.95em;
     }
+
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: linear-gradient(135deg, #808f83 0%, #0da724 100%);
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0.5rem auto 1.5rem;
+      line-height: 1.6;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background-color: #fff;
+      color: #7c1d47;
+      font-weight: bold;
+      padding: 0.9rem 2rem;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background-color: #f3dbe5;
+      transform: translateY(-2px);
+    }
+
+    /* Pricing Section */
+    .pricing {
+      text-align: center;
+      padding: 3rem 1rem;
+      background-color: #f9f9f9;
+    }
+
+    .pricing h2 {
+      color: #7c1d47;
+      font-family: 'Merriweather', serif;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
+
+    .pricing p {
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      font-size: 1rem;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .pricing-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+      padding: 2rem 2.5rem;
+      max-width: 360px;
+      margin: 0 auto;
+    }
+
+    .pricing-card h3 {
+      color: #7c1d47;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .pricing-card p.price {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #333;
+      margin: 0.5rem 0 1rem;
+    }
+
+    .pricing-card ul {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #555;
+    }
+
+    form {
+      max-width: 700px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 2rem 1rem;
+    }
+
+    form h3 {
+      color: #7c1d47;
+    }
+
+    form label {
+      display: flex;
+      flex-direction: column;
+      font-size: 0.95rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+      padding: 0.6rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      margin-top: 0.3rem;
+    }
+
+    input[type="submit"] {
+      background-color: #7c1d47;
+      color: white;
+      border: none;
+      padding: 1rem;
+      font-weight: bold;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #b34f74;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      color: #444;
+    }
+
+    footer a {
+      color: #7c1d47;
+      text-decoration: none;
+      margin: 0 0.4rem;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 
 <body>
+
+  <!-- Header -->
   <div id="headerWrapper">
     <header id="top" style="display:flex;align-items:center;gap:1rem;padding:1rem;">
       <a href="index.html" class="logo-link" style="display:flex;align-items:center;">
@@ -33,119 +192,119 @@
           srcset="images/logo1x.png 1x,
                   images/logo2x.png 2x,
                   images/logo3x.png 3x"
-          alt="Apex University Logo"
+          alt="Pivot Point Logo"
           style="height:60px;width:auto;display:block;">
       </a>
-      <span style="font-size:1.8rem;font-weight:bold;">Apex University</span>
+      <span style="font-size:1.8rem;font-weight:bold;">Pivot Point</span>
       <a href="#navlinks" style="margin-left:auto;font-size:2rem;text-decoration:none;color:#333;">&#9776;</a>
     </header>
-  </div><!-- end header wrapper -->
+  </div>
 
+  <!-- Navigation -->
   <div id="navWrapper">
     <nav id="navlinks">
       <a href="#top">&#10005;</a>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Programs</a></li>
-        <li class="active"><a href="#">Applications</a></li>
-        <li><a href="#">Faculty & Staff</a></li>
-        <li><a href="#">Campus Life</a></li>
-        <li><a href="#">Contact Us</a></li>
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">How It Works</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Our Team</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
     </nav>
-  </div> <!-- end nav wrapper -->
+  </div>
 
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h1>Empowering Small Businesses with Practical AI Coaching</h1>
+    <p>Pivot Point connects college students trained in AI productivity tools with small business owners who need practical, hands-on help adapting to modern technology. Learn how tools like ChatGPT, Canva AI, and scheduling automations can streamline your operations, marketing, and customer service.</p>
+    <a href="#signup" class="cta-btn">Get Started Today</a>
+  </section>
+
+  <!-- PRICING SECTION -->
+  <section class="pricing">
+    <h2>Simple, Transparent Pricing</h2>
+    <p>Try Pivot Point risk-free. Your first AI coaching session is <strong>completely free</strong>. After that, continue with a flexible monthly plan designed for growing small businesses.</p>
+
+    <div class="pricing-card">
+      <h3>AI Coaching Plan</h3>
+      <p class="price">$250<span style="font-size:1rem; font-weight:400;">/month</span></p>
+      <ul>
+        <li>✔ Personalized 1-on-1 AI coaching</li>
+        <li>✔ Access to student-trained AI specialists</li>
+        <li>✔ On-site or virtual sessions</li>
+        <li>✔ Custom AI tool setup (ChatGPT, Canva, etc.)</li>
+        <li>✔ Follow-up resources and support</li>
+      </ul>
+      <a href="#signup" class="cta-btn" style="margin-top:1.5rem;">Start Free Trial</a>
+    </div>
+  </section>
+
+  <!-- SIGN-UP FORM -->
   <div id="mainWrapper">
     <main>
-
-      <h1>Apply to Apex University</h1>
+      <h2>Sign Up for AI Coaching</h2>
       <p class="header-paragraph">
-        Please complete this application form carefully and professionally. Provide accurate information so our admissions team can process your application efficiently. Double-check your contact information before submitting.
+        Fill out the form below to connect with a local AI Coach and schedule your first session. 
+        We’ll help you integrate modern AI tools into your business — simply, effectively, and affordably.
       </p>
 
-      <form method="GET" action="thanks.html" class="my-form" autocomplete="on">
+      <form id="signup" method="GET" action="thanks.html" class="my-form" autocomplete="on">
 
-        <!-- Personal Information -->
-        <h3>Personal Information</h3>
-        <label>First Name: <input type="text" name="fname" autocomplete="given-name" required title="First Name Here"></label>
-        <label>Last Name: <input type="text" name="lname" autocomplete="family-name" required title="Last Name Here"></label>
-        <label>Email: <input type="email" name="email" autocomplete="email" required title="Your Email Please"></label>
-        <label>Cell Phone: <input type="tel" name="phone" autocomplete="tel" required title="Cell Phone # Here"></label>
+        <h3>Business Contact Information</h3>
+        <label>First Name: <input type="text" name="fname" autocomplete="given-name" required></label>
+        <label>Last Name: <input type="text" name="lname" autocomplete="family-name" required></label>
+        <label>Email: <input type="email" name="email" autocomplete="email" required></label>
+        <label>Phone: <input type="tel" name="phone" autocomplete="tel" required></label>
 
-        <!-- Optional Address -->
-        <h3>Address <span class="optional">(optional)</span></h3>
-        <p class="header-paragraph">
-          Providing your address can help us send important information or materials related to your application, if needed.
-        </p>
-        <label>Street Address:
-          <input type="text" name="street-address">
+        <h3>Business Details</h3>
+        <label>Business Name:
+          <input type="text" name="business-name" required>
         </label>
-        <label>City:
-          <input type="text" name="city">
-        </label>
-        <label>State:
-          <input type="text" name="state">
-        </label>
-        <label>Zip Code:
-          <input type="text" name="zip">
-        </label>
-
-        <!-- Optional Prior Education -->
-        <label>
-          Type of Prior Education <span class="optional">(optional)</span>:
-          <select name="prior-education">
-            <option value="">Select your education level</option>
-            <option value="high-school">High School Diploma</option>
-            <option value="ged">GED</option>
-            <option value="associate">Associate Degree</option>
-            <option value="other">Other</option>
+        <label>Industry:
+          <select name="industry" required>
+            <option value="">Select your industry</option>
+            <option>Retail</option>
+            <option>Restaurant / Food Service</option>
+            <option>Health & Wellness</option>
+            <option>Professional Services</option>
+            <option>Construction / Trades</option>
+            <option>Other</option>
           </select>
         </label>
 
-        <label>
-          High School Graduation Date <span class="optional">(optional)</span>:
-          <input type="date" name="grad-date">
+        <h3>Coaching Preferences</h3>
+        <label><input type="radio" name="session-type" value="in-person" required> In-Person Session</label>
+        <label><input type="radio" name="session-type" value="virtual" required> Virtual Session (Zoom)</label>
+        <label><input type="radio" name="session-type" value="both"> Hybrid (In-person + Follow-up Online)</label>
+
+        <label>Areas of Interest:
+          <select name="interest">
+            <option value="">Select one</option>
+            <option value="marketing">AI for Marketing & Content Creation</option>
+            <option value="operations">AI for Scheduling & Operations</option>
+            <option value="customer-service">AI for Customer Support</option>
+            <option value="general">General AI Training</option>
+          </select>
         </label>
 
-        <!-- Programs of Interest -->
-        <h3>Programs of Interest <span class="optional">(optional)</span></h3>
-        <label><input type="checkbox" name="programs" value="Computer Science"> Computer Science</label>
-        <label><input type="checkbox" name="programs" value="Business Administration"> Business Administration</label>
-        <label><input type="checkbox" name="programs" value="Psychology"> Psychology</label>
-        <label><input type="checkbox" name="programs" value="Biology"> Biology</label>
-        <label><input type="checkbox" name="programs" value="Engineering"> Engineering</label>
-        <label><input type="checkbox" name="programs" value="Fine Arts"> Fine Arts</label>
-        <label><input type="checkbox" name="programs" value="Education"> Education</label>
-        <label><input type="checkbox" name="programs" value="Environmental Science"> Environmental Science</label>
-
-        <!-- Communication Preferences -->
-        <h3>Communication Preferences <span class="optional">(optional)</span></h3>
-        <label><input type="radio" name="contact-method" value="email"> Email</label>
-        <label><input type="radio" name="contact-method" value="phone"> Phone</label>
-        <label><input type="radio" name="contact-method" value="mail"> Postal Mail</label>
-
-        <!-- Account Setup -->
-        <h3>Account Setup</h3>
-        <label>Username (6-10 letters):
-          <input type="text" name="username" required pattern="[A-Za-z]{6,10}" title="Enter 6-10 letters for your username">
+        <label>Additional Comments or Goals:
+          <textarea name="comments" rows="4" placeholder="Tell us what you’d like help with..."></textarea>
         </label>
 
-        <label>Password (min 6 characters):
-          <input type="password" name="password" required minlength="6" title="Enter a password at least 6 characters long">
-        </label>
-
-        <input type="submit" value="Submit Application">
+        <input type="submit" value="Request My AI Coaching Session">
       </form>
-
     </main>
-  </div><!-- end main wrapper -->
+  </div>
 
+  <!-- Footer -->
   <div id="footerWrapper">
     <footer>
-      <p>Copyright &copy; Walter Blundell 2025 University Admissions
-        <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#">Clients</a></p>
+      <p>© 2025 Pivot Point | Empowering Small Businesses with AI  
+        <a href="#">Privacy Policy</a> | <a href="#">Terms</a> | <a href="#">Contact</a>
+      </p>
     </footer>
-  </div> <!-- end footer wrapper -->
+  </div>
 
 </body>
 </html>

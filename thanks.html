@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Thank You - Apex University</title>
+  <title>Thank You - Pivot Point</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Google Fonts -->
@@ -15,7 +15,6 @@
   <link rel="stylesheet" type="text/css" media="screen" href="css/styles.min.css">
 
   <style>
-    /* Flex layout to push footer to bottom */
     body {
       display: flex;
       flex-direction: column;
@@ -34,7 +33,7 @@
     main h1 {
       font-family: 'Merriweather', serif;
       color: #7c1d47;
-      font-size: 2rem;
+      font-size: 2.2rem;
       margin-bottom: 1rem;
     }
 
@@ -46,39 +45,55 @@
       margin: 0.5rem auto;
       line-height: 1.6;
     }
+
+    .cta-btn {
+      display: inline-block;
+      background-color: #7c1d47;
+      color: white;
+      font-weight: bold;
+      padding: 0.9rem 2rem;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      margin-top: 1.5rem;
+    }
+
+    .cta-btn:hover {
+      background-color: #b34f74;
+      transform: translateY(-2px);
+    }
   </style>
 </head>
 
 <body>
 
   <!-- Header -->
-   <div id="headerWrapper">
-  <header id="top" style="display:flex;align-items:center;gap:1rem;padding:1rem;">
-  <a href="index.html" class="logo-link" style="display:flex;align-items:center;">
-    <img 
-      src="images/logo1x.png"
-      srcset="images/logo1x.png 1x,
-              images/logo2x.png 2x,
-              images/logo3x.png 3x"
-      alt="Apex University Logo"
-      style="height:60px;width:auto;display:block;">
-  </a>
-  <span style="font-size:1.8rem;font-weight:bold;">Apex University</span>
-  <a href="#navlinks" style="margin-left:auto;font-size:2rem;text-decoration:none;color:#333;">&#9776;</a>
-</header>
-</div>
+  <div id="headerWrapper">
+    <header id="top" style="display:flex;align-items:center;gap:1rem;padding:1rem;">
+      <a href="index.html" class="logo-link" style="display:flex;align-items:center;">
+        <img 
+          src="images/logo1x.png"
+          srcset="images/logo1x.png 1x,
+                  images/logo2x.png 2x,
+                  images/logo3x.png 3x"
+          alt="Pivot Point Logo"
+          style="height:60px;width:auto;display:block;">
+      </a>
+      <span style="font-size:1.8rem;font-weight:bold;">Pivot Point</span>
+      <a href="#navlinks" style="margin-left:auto;font-size:2rem;text-decoration:none;color:#333;">&#9776;</a>
+    </header>
+  </div>
 
   <!-- Navigation -->
   <div id="navWrapper">
     <nav id="navlinks">
       <a href="#top">&#10005;</a>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Programs</a></li>
-        <li class="active"><a href="#">Applications</a></li>
-        <li><a href="#">Faculty & Staff</a></li>
-        <li><a href="#">Campus Life</a></li>
-        <li><a href="#">Contact Us</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">How It Works</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Our Team</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -86,21 +101,21 @@
   <!-- Main Content -->
   <div id="mainWrapper">
     <main>
-      <h1 class="thank-you-title">Thank You for Applying!</h1>
-      <p>Your application to <strong>Apex University</strong> has been successfully submitted. Our admissions team will review your information and contact you shortly regarding the next steps.</p>
-      <p>If you have any questions in the meantime, please <a href="#">reach out to our admissions office</a>.</p>
+      <h1 class="thank-you-title">Thank You for Reaching Out!</h1>
+      <p>Your request has been successfully submitted. A Pivot Point AI Coach will contact you soon to schedule your first session and discuss how we can help your business integrate practical AI tools.</p>
+      <p>We’re excited to help your business save time, streamline operations, and grow with modern technology.</p>
+      <a href="index.html" class="cta-btn">Return to Home</a>
     </main>
   </div>
 
   <!-- Footer -->
   <div id="footerWrapper">
     <footer>
-      <p>Copyright &copy; Walter Blundell 2025 University Admissions
-        <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#">Clients</a>
+      <p>© 2025 Pivot Point | Empowering Small Businesses with AI  
+        <a href="#">Privacy Policy</a> | <a href="#">Terms</a> | <a href="#">Contact</a>
       </p>
     </footer>
   </div>
 
 </body>
-
 </html>

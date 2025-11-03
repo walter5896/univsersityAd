@@ -64,71 +64,55 @@ div#navWrapper {
   grid-row-start: 4;
 }
 
-#top a, #navlinks > a {
-  display: block;
-  text-align: right;
-  font-size: 1.6rem;
-  height: 44px;
-  text-decoration: none;
-  color: #333;
+/* Hide hamburger and close buttons completely */
+#top a[href="#navlinks"],
+#navlinks > a[href="#top"] {
+  display: none !important;
 }
 
-#top a { font-size: 2rem; }
-#navlinks > a { padding: 15px 13px 0 0; }
+/* Keep nav responsive, but show links inline */
+#navlinks {
+  display: block;
+  position: relative;
+  background: none;
+  height: auto;
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem 0;
+}
 
-nav { height: 100vh; }
-
-ul {
+#navlinks ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
-li a {
-  display: block;
+#navlinks li {
+  display: inline-block;
+}
+
+#navlinks li a {
+  display: inline-block;
   color: $primaryColor;
-  padding: 0.9rem 2vw;
+  padding: 0.6rem 1rem;
   text-decoration: none;
-  text-align: right;
-  border-bottom: 1px solid $greyColor;
   font-family: $headingFont;
+  font-weight: $boldWeight;
+  border-bottom: none;
+  transition: color 0.3s ease;
 }
 
-li.active a {
+#navlinks li.active a {
   color: $secondaryColor;
-}
-.thank-you-title {
-  color: $secondaryColor; // or any color you like
-}
-#navlinks ul li.active a {
-    background-color: transparent; /* remove the block color */
-    color: $secondaryColor; /* dark grey text, optional */
-    border-radius: 0; /* remove rounding */
-    border-bottom: 3px solid #555; /* the underline */
-    transition: all 0.3s ease;
+  border-bottom: 3px solid $secondaryColor;
 }
 
-/* Hover bounce */
-#navlinks ul li a:hover {
-    animation: bounce 0.6s;
-}
-
-/* Keyframes for bounce */
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-5px);
-  }
-  60% {
-    transform: translateY(-3px);
-  }
-}
-/* Apply bounce on hover */
-#navlinks ul li a:hover {
-    animation: bounce 0.6s;
+#navlinks li a:hover {
+  color: $secondaryColor;
 }
 
 /* --------------------------- MAIN CONTENT --------------------------- */
@@ -144,7 +128,20 @@ main {
     line-height: $leading;
   }
 }
+.pricing-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  padding: 2.5rem 3rem;    /* increase padding so text has breathing room */
+  max-width: 500px;        /* increase max width so text fits */
+  width: 90%;              /* flexible width on smaller screens */
+  box-sizing: border-box;  /* ensures padding is included in width */
+  margin: 0 auto;          /* centers card */
+}
 
+.pricing-card ul li {
+  word-wrap: break-word;   /* prevent text overflow */
+}
 /* --------------------------- FORM --------------------------- */
 form.my-form {
   margin: 2rem $gutter;
@@ -241,7 +238,24 @@ form.my-form {
     box-shadow: 0 4px 12px rgba(0,0,0,0.12);
   }
 }
+#mainWrapper main {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
 
+#mainWrapper main form {
+  align-items: center;
+}
+
+#mainWrapper main label,
+#mainWrapper main input,
+#mainWrapper main select,
+#mainWrapper main textarea {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
 
 /* --------------------------- FOOTER --------------------------- */
 #footerWrapper {
@@ -252,9 +266,9 @@ footer {
   font-family: $defaultFont;
   font-size: 0.85rem;
   padding: 1rem $gutter;
-  color: $greyColor;
+  color: white;
   text-align: center;
   line-height: $leading;
 
-  a { color: $greyColor; }
+  a { color: white; }
 }

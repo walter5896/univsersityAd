@@ -252,9 +252,9 @@ footer {
   font-family: $defaultFont;
   font-size: 0.85rem;
   padding: 1rem $gutter;
-  color: $greyColor;
+  color: white;
   text-align: center;
   line-height: $leading;
 
-  a { color: $greyColor; }
+  a { color: white; }
 }

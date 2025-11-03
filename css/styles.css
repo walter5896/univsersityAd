@@ -553,12 +553,12 @@ footer {
   font-family: "Roboto", sans-serif;
   font-size: 0.85rem;
   padding: 1rem 10px;
-  color: #ccc;
+  color: white;
   text-align: center;
   line-height: 150%;
 }
 footer a {
-  color: #ccc;
+  color: white;
 }
 
 @media only screen and (min-width: 35rem) {
